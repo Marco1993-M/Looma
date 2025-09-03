@@ -94,7 +94,7 @@ export default function Plans() {
               <div>
                 <h4 className="text-lg font-semibold text-black">Take a Break Anytime</h4>
                 <p className="text-black/50">
-                  Need a pause? Put your plan on hold whenever you like—no stress, no hassle.
+                  Need a pause? Put your plan on hold whenever you like no stress, no hassle.
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Plans() {
               <div>
                 <h4 className="text-lg font-semibold text-black">Try it Risk-Free</h4>
                 <p className="text-black/50">
-                  Not sure it's a fit? Test it for a week—if it's not working out, get 75% back. No questions asked.
+                  Not sure it is a fit? Test it for a week—if it is not working out, get 75% back. No questions asked.
                 </p>
               </div>
             </div>
