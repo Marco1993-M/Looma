@@ -18,49 +18,44 @@ export default function Home() {
         <title>Design Services</title>
       </Head>
 
-      <div className="flex gap-8 w-full max-w-6xl items-stretch">
+      <div className="flex gap-8 w-full max-w-6xl items-stretch flex-wrap">
        
-        {/* Left Card - wider, no padding */}
+        {/* Left Card - wider */}
         <div className="bg-white border border-black rounded-lg shadow-lg flex-1 flex flex-col h-[600px] p-0">
           <div className="flex-1 flex flex-col justify-between">
 
-{/* Diagonal Rolling Banner */}
-<div className="relative w-full h-72 overflow-hidden mb-0"> {/* increased from h-32 → h-48 */}
-  <div className="marquee-diagonal-wrapper absolute inset-0">
-    <div className="marquee-diagonal-track flex">
-      {marqueeImages.concat(marqueeImages).map((src, i) => (
-        <Image
-          key={i}
-          src={src}
-          alt={`Banner ${i}`}
-          width={200}
-          height={200}
-          className="mx-2 object-cover rounded-lg"
-        />
-      ))}
-    </div>
-  </div>
-</div>
+            {/* Diagonal Rolling Banner */}
+            <div className="relative w-full h-72 overflow-hidden mb-0">
+              <div className="marquee-diagonal-wrapper absolute inset-0">
+                <div className="marquee-diagonal-track flex">
+                  {marqueeImages.concat(marqueeImages).map((src, i) => (
+                    <Image
+                      key={i}
+                      src={src}
+                      alt={`Banner ${i}`}
+                      width={200}
+                      height={200}
+                      className="mx-2 object-cover rounded-lg"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
 
+            {/* Awards Section */}
+            <div className="flex items-center justify-left mt-0 px-6 gap-4">
+              <div className="flex-0 border-2 border-dashed border-black/20 rounded-xl p-3 text-left">
+                <p className="text-yellow-500">🌞 Founder-led 🌞 </p>
+                <p className="text-gray-600">No outsourcing</p>
+                <p className="text-gray-400">No compromises</p>
+              </div>
 
-{/* Awards Section */}
-<div className="flex items-center justify-left mt-0 px-6 gap-4"> {/* removed mb-4 */}
-  {/* Container 1 */}
-  <div className="flex-0 border-2 border-dashed border-black/20 rounded-xl p-3 text-left">
-    <p className="text-yellow-500">🌞 Founder-led 🌞 </p>
-    <p className="text-gray-600">No outsourcing</p>
-    <p className="text-gray-400">No compromises</p>
-  </div>
-
-  {/* Container 2 */}
-  <div className="flex-0 border-2 border-dashed border-black/20 rounded-xl p-3 text-left">
-    <p className="text-green-500">🌱 Quick Designs 🌱</p>
-    <p className="text-gray-600">High-quality design — every time</p>
-    <p className="text-gray-400">We scale with you</p>
-  </div>
-</div>
-
-
+              <div className="flex-0 border-2 border-dashed border-black/20 rounded-xl p-3 text-left">
+                <p className="text-green-500">🌱 Quick Designs 🌱</p>
+                <p className="text-gray-600">High-quality design — every time</p>
+                <p className="text-gray-400">We scale with you</p>
+              </div>
+            </div>
 
             {/* CTA Section */}
             <div className="mt-6 mb-12 px-6">
@@ -76,7 +71,7 @@ export default function Home() {
         </div>
 
         {/* Right Card - thinner */}
-        <div className="bg-white border border-black rounded-lg shadow-lg flex-2 flex flex-col h-[600px] p-6">
+        <div className="bg-white border border-black rounded-lg shadow-lg flex-1 flex flex-col h-[600px] p-6">
           <div className="flex-1 flex flex-col items-center justify-center">
             <div className="text-center w-full max-w-sm">
               <div className="bg-pink-200 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -103,6 +98,7 @@ export default function Home() {
                 ].map((service, idx) => (
                   <button
                     key={idx}
+                    type="button"
                     className="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition text-sm"
                   >
                     {service}
