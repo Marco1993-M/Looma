@@ -13,17 +13,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center mb-24 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center mb-24 p-6">
       <Head>
         <title>Design Services</title>
       </Head>
 
+      {/* Cards Container */}
       <div className="flex gap-8 w-full max-w-6xl items-stretch flex-wrap">
-       
-        {/* Left Card - wider */}
-        <div className="bg-white border border-black rounded-lg shadow-lg flex-1 flex flex-col h-[600px] p-0">
+        {/* Left Card */}
+        <div className="bg-white border border-black rounded-lg shadow-lg flex-1 flex flex-col md:h-[600px] h-[500px] p-0">
           <div className="flex-1 flex flex-col justify-between">
-
             {/* Diagonal Rolling Banner */}
             <div className="relative w-full h-72 overflow-hidden mb-0">
               <div className="marquee-diagonal-wrapper absolute inset-0">
@@ -56,22 +55,11 @@ export default function Home() {
                 <p className="text-gray-400">We scale with you</p>
               </div>
             </div>
-
-            {/* CTA Section */}
-            <div className="mt-6 mb-12 px-6">
-              <h1 className="text-xl text-black font-semibold">Recent work</h1>
-              <p className="text-gray-600">
-                See how we catapult our clients.
-              </p>
-              <button className="bg-gradient-to-t from-black to-gray-800 text-white px-6 mt-6 py-3 rounded-lg border border-black shadow-inner shadow-white/80 hover:shadow-[inset_0_0_10px_rgba(255,255,255,0.35),0_4px_12px_rgba(0,0,0,0.5)] transition-all duration-300">
-                See recent work
-              </button>
-            </div>
           </div>
         </div>
 
-        {/* Right Card - thinner */}
-        <div className="bg-white border border-black rounded-lg shadow-lg flex-1 flex flex-col h-[600px] p-6">
+        {/* Right Card */}
+        <div className="bg-white border border-black rounded-lg shadow-lg flex-1 flex flex-col md:h-[600px] h-[500px] p-6">
           <div className="flex-1 flex flex-col items-center justify-center">
             <div className="text-center w-full max-w-sm">
               <div className="bg-pink-200 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -109,12 +97,17 @@ export default function Home() {
               <h2 className="text-xl font-semibold mt-6">
                 Apps, websites, logos & more
               </h2>
-              <p className="text-gray-600">
-                We cover it all.
-              </p>
+              <p className="text-gray-600">We cover it all.</p>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* See Recent Work Button - left-aligned */}
+      <div className="mt-8 w-[80%] md:w-auto text-left">
+        <button className="bg-gradient-to-t from-black to-gray-800 text-white px-6 py-3 rounded-lg border border-black shadow-inner shadow-white/80 hover:shadow-[inset_0_0_10px_rgba(255,255,255,0.35),0_4px_12px_rgba(0,0,0,0.5)] transition-all duration-300">
+          See recent work
+        </button>
       </div>
     </div>
   );
