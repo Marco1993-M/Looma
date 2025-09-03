@@ -1,0 +1,19 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Plans from "@/components/Plans";
+import Workflow from "@/components/Workflow";
+import Portfolio from "@/components/Portfolio";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Plans />
+      <Workflow />
+      <Portfolio />
+      <Footer />
+    </>
+  );
+}

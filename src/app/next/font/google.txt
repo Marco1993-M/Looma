@@ -1,0 +1,15 @@
+// src/app/layout.tsx
+import { Figtree, Lora } from 'next/font/google';
+
+const figtree = Figtree({ subsets: ['latin'], weight: ['400','500','600','700'] });
+const scotch = Lora({ subsets: ['latin'], weight: ['400','700'] });
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={figtree.className}>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}

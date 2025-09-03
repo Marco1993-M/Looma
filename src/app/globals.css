@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Looma styles */
+@layer base {
+  /* Body */
+  body {
+    @apply bg-transparent text-white antialiased;
+    font-family: 'Figtree', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ebe6e8, #f3e8ec);
+  }
+
+  /* Headings */
+  h1 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight text-white;
+    font-family: 'Figtree', sans-serif;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold text-white;
+    font-family: 'Figtree', sans-serif;
+  }
+
+  h3 {
+    @apply text-2xl font-medium text-white;
+    font-family: 'Figtree', sans-serif;
+  }
+
+  /* Paragraphs */
+  p {
+    @apply text-white leading-relaxed;
+    font-family: 'Figtree', sans-serif;
+  }
+
+  /* Links */
+  a {
+    @apply text-white hover:text-indigo-300 transition-colors;
+  }
+
+  /* Optional serif class for Scotch Text sections */
+  .serif {
+    font-family: 'Lora', serif;
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+/* -----------------------------
+   Diagonal Marquee Styles
+----------------------------- */
+/* Diagonal rolling banner container rotated */
+.marquee-diagonal-wrapper {
+  width: 100%;
+  height: 100%;
+  transform: rotate(12deg) scale(1.1); /* scale slightly to prevent clipping */
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Track slides horizontally inside rotated container */
+.marquee-diagonal-track {
+  display: flex;
+  width: max-content;
+  position: absolute;
+  animation: marquee-slide 15s linear infinite;
+}
+
+.marquee-diagonal-track:hover {
+  animation-play-state: paused;
+}
+
+/* Horizontal movement, appears diagonal due to rotation */
+@keyframes marquee-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
