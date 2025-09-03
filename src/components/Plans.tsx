@@ -20,7 +20,7 @@ export default function Plans() {
         <span className="serif italic text-5xl text-black font-thin">Our </span>
         <span className="font-bold text-black text-5xl">Plans</span>
         <p className="text-2xl text-black font-200 mt-2 mb-12">
-          Design quality teams rely on — pricing you will love.
+          Design quality teams rely on, pricing you will love.
         </p>
 
         {/* Grid with 5 columns: image = 1, each plan = 2 */}
@@ -101,7 +101,7 @@ export default function Plans() {
                 Take a Break Anytime
               </h4>
               <p className="text-black/50">
-                Need a pause? Put your plan on hold whenever you like—no stress,
+                Need a pause? Put your plan on hold whenever you like, no stress,
                 no hassle.
               </p>
             </div>
@@ -112,10 +112,10 @@ export default function Plans() {
             <Clock className="w-8 h-8 text-black flex-shrink-0" />
             <div>
               <h4 className="text-lg font-semibold text-black">
-                Try it Risk-Free
+                Try it Risk Free
               </h4>
               <p className="text-black/50">
-                Not sure it's a fit? Test it for a week—if it's not working out,
+                Not sure it is a fit? Test it for a week, if it is not working out,
                 get 75% back. No questions asked.
               </p>
             </div>
