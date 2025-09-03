@@ -20,7 +20,7 @@ export default function Plans() {
         <span className="serif italic text-5xl text-black font-thin">Our </span>
         <span className="font-bold text-black text-5xl">Plans</span>
         <p className="text-2xl text-black font-200 mt-2 mb-12">
-          Design quality teams rely on — pricing you'll love.
+          Design quality teams rely on — pricing you will love.
         </p>
 
         {/* Container to constrain mobile width for plan cards */}
