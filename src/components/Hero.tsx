@@ -2,7 +2,7 @@
 import Button from "./Button";
 
 export default function Hero() {
-  function scrollToPlans(duration: number = 800): void {
+  function scrollToPlans(duration = 800) {
     const plansSection = document.getElementById("plans");
     if (!plansSection) return;
 
@@ -12,7 +12,7 @@ export default function Hero() {
     const distance = targetPosition - startPosition;
     let startTime: number | null = null;
 
-    function animation(currentTime: number): void {
+    function animation(currentTime: number) {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
@@ -20,7 +20,7 @@ export default function Hero() {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    function easeInOutQuad(t: number, b: number, c: number, d: number): number {
+    function easeInOutQuad(t, b, c, d) {
       t /= d / 2;
       if (t < 1) return (c / 2) * t * t + b;
       t--;
@@ -49,11 +49,12 @@ export default function Hero() {
           Fast, high-quality design work. Cancel anytime.
         </p>
 
-        <div className="flex flex-col items-center gap-6 mt-2 w-full max-w-md">
+        {/* Button Container: constrain width to 80% on mobile */}
+        <div className="flex flex-col items-center gap-6 mt-2 w-[80%] md:w-full max-w-md">
           {/* See Pricing Button Section */}
           <div
             className="w-full bg-white/80 rounded-xl text-black p-4 flex justify-center hover:bg-black hover:text-white transition"
-            onClick={() => scrollToPlans(1000)} // duration in ms
+            onClick={() => scrollToPlans(1000)}
           >
             <Button className="w-full text-center">See Pricing</Button>
           </div>
@@ -65,7 +66,9 @@ export default function Hero() {
 
             {/* Middle: Text */}
             <div className="flex flex-col text-left">
-              <span className="font-semibold text-black text-lg">Book a 15-min Intro Call</span>
+              <span className="font-semibold text-black text-lg">
+                Book a 15-min Intro Call
+              </span>
               <span className="text-sm text-black/20">Schedule now</span>
             </div>
 
