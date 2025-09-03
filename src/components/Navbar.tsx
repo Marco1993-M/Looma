@@ -36,8 +36,8 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md px-4 sm:px-8 py-4 shadow-md">
-      <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md px-4 sm:px-8 py-4 shadow-md">
+      <div className="relative h-16 flex items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-black">
           Looma
