@@ -9,7 +9,7 @@ export default function SocialProof1() {
         {/* Quote 1 */}
         <div className="flex flex-col h-full justify-between items-center">
           <h3 className="font-serif font-thin text-2xl md:text-4xl lg:text-5xl italic text-black mb-4 leading-snug">
-            "Looma nailed it. From website to design materials”
+            ”Looma nailed it. From website to design materials”
           </h3>
 
           <div className="flex justify-center items-end w-36 h-16 md:w-40">
@@ -33,7 +33,7 @@ export default function SocialProof1() {
         {/* Quote 2 */}
         <div className="flex flex-col h-full justify-between items-center">
           <h3 className="font-serif font-thin text-2xl md:text-4xl lg:text-5xl italic text-black mb-4 leading-snug">
-            “Their creativity and attention to detail is unmatched. Leave it to the pros!"
+            “Their creativity and attention to detail is unmatched. Leave it to the pros!”
           </h3>
 
           <div className="flex justify-center items-end w-36 h-16 md:w-40">
@@ -75,7 +75,7 @@ export default function SocialProof1() {
         {/* Quote 4 */}
         <div className="flex flex-col h-full justify-between items-center">
           <h3 className="font-serif font-thin text-2xl md:text-4xl lg:text-5xl italic text-black mb-4 leading-snug">
-            "Looma transformed our brand identity. Highly recommend!"
+            ”Looma transformed our brand identity. Highly recommend!”
           </h3>
 
           <div className="flex justify-center items-end w-36 h-16 md:w-40">
