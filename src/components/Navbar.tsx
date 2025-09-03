@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Navbar() {
-  function scrollToPlans(duration: number = 800) {
+  function scrollToPlans(duration: number = 800): void {
     const plansSection = document.getElementById("plans");
     if (!plansSection) return;
 
@@ -14,7 +14,7 @@ export default function Navbar() {
     const distance = targetPosition - startPosition;
     let startTime: number | null = null;
 
-    function animation(currentTime: number) {
+    function animation(currentTime: number): void {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
@@ -22,12 +22,7 @@ export default function Navbar() {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    function easeInOutQuad(
-      t: number,
-      b: number,
-      c: number,
-      d: number
-    ): number {
+    function easeInOutQuad(t: number, b: number, c: number, d: number): number {
       t /= d / 2;
       if (t < 1) return (c / 2) * t * t + b;
       t--;
