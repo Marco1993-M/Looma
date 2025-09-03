@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Navbar() {
-    function scrollToPlans(duration = 800) {
+  function scrollToPlans(duration: number = 800) {
     const plansSection = document.getElementById("plans");
     if (!plansSection) return;
 
@@ -22,7 +22,12 @@ export default function Navbar() {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    function easeInOutQuad(t, b, c, d) {
+    function easeInOutQuad(
+      t: number,
+      b: number,
+      c: number,
+      d: number
+    ): number {
       t /= d / 2;
       if (t < 1) return (c / 2) * t * t + b;
       t--;
@@ -57,14 +62,12 @@ export default function Navbar() {
           </button>
 
           {/* See Pricing */}
-   <button
+          <button
             onClick={() => scrollToPlans(1000)} // duration in ms
             className="bg-gradient-to-t from-black to-gray-800 text-white px-6 py-3 rounded-lg border border-black shadow-inner shadow-white/80 hover:shadow-[inset_0_0_10px_rgba(255,255,255,0.35),0_4px_12px_rgba(0,0,0,0.5)] transition-all duration-300"
           >
             See Pricing
           </button>
-
-
         </div>
       </div>
     </nav>
