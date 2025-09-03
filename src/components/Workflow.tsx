@@ -35,7 +35,8 @@ export default function Workflow() {
         <span className="font-sans">how design was meant to be.</span>
       </h3>
 
-      <div className="max-w-5xl mx-auto text-center">
+      {/* Container with max 80% width on mobile */}
+      <div className="w-[80%] md:w-full max-w-5xl mx-auto text-center">
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, idx) => (
             <div
