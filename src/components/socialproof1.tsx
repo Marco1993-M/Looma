@@ -33,7 +33,7 @@ export default function SocialProof1() {
         {/* Quote 2 */}
         <div className="flex flex-col h-full justify-between items-center">
           <h3 className="font-serif font-thin text-4xl md:text-5xl italic text-black mb-4">
-            “Their creativity and attention to detail is unmatched. Leave it to the pros!"
+            “Their creativity and attention to detail is unmatched. Leave it to the pros!”
           </h3>
 
           <div className="flex justify-center items-end w-40 h-16">
@@ -76,7 +76,7 @@ export default function SocialProof1() {
 {/* Quote 4 */}
         <div className="flex flex-col h-full justify-between items-center">
           <h3 className="font-serif font-thin text-4xl md:text-5xl italic text-black mb-4">
-            "Looma transformed our brand identity. Highly recommend!"
+            "Looma transformed our brand identity. Highly recommend!”
           </h3>
 
           <div className="flex justify-center items-end w-40 h-16">
